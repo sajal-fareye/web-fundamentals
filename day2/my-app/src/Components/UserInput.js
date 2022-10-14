@@ -23,8 +23,8 @@ export default class UserInput extends PureComponent{
         }
     }
 
-    handleuser=()=>{
-        this.props.handleuser({
+    handleUser=()=>{
+        this.props.handleUser({
             username: this.state.username
         });
         this.setState({username:""});
@@ -41,7 +41,7 @@ export default class UserInput extends PureComponent{
         </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-            <Button type="primary" htmlType="submit" onClick={()=>this.props.handleuser}>
+            <Button type="primary" htmlType="submit" onClick={()=>this.handleUser()}>
                 Submit
             </Button>
         </Form.Item>

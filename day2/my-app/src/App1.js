@@ -22,7 +22,7 @@ class App1 extends PureComponent{
         }
     }
 
-    handleuser=(value)=>{
+    handleUser=(value)=>{
         console.log(value);
         this.setState({
             user:[...this.state.user, value]
@@ -54,7 +54,7 @@ class App1 extends PureComponent{
             {/* <AddButton incrementCounter={this.incrementCounter}/> */}
             {/* <Counter counter = {this.state.counter}/> */}
 
-            <UserInput handleuser = {this.handleuser}/>
+            <UserInput handleUser = {this.handleUser}/>
             <PrintList user = {this.state.user}/> 
             
         </div>

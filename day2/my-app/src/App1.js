@@ -18,7 +18,7 @@ class App1 extends PureComponent{
     constructor(){
         super();
         this.state={
-            user:[{username:""}]
+            user:[{username:"",email:""}]
         }
     }
 

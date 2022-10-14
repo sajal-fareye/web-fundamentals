@@ -19,15 +19,17 @@ export default class UserInput extends PureComponent{
     constructor(){
         super();
         this.state={
-            username:""
+            username:"",
+            email:""
         }
     }
 
     handleUser=()=>{
         this.props.handleUser({
-            username: this.state.username
+            username: this.state.username,
+            email: this.state.email
         });
-        this.setState({username:""});
+        this.setState({username:"",email:""});
     }
 
     render(){
@@ -38,6 +40,13 @@ export default class UserInput extends PureComponent{
             name="username"
         rules={[{ message: 'Please input your username!' }]}>
             <Input onChange={(e) => {this.setState({username: e.target.value})}}/>
+        </Form.Item>
+
+        <Form.Item
+            label="Email"
+            name="Email"
+        rules={[{ message: 'Please input your Email!' }]}>
+            <Input onChange={(e) => {this.setState({email: e.target.value})}}/>
         </Form.Item>
 
         <Form.Item wrapperCol={{ offset: 8, span: 16 }}>

@@ -7,17 +7,11 @@ export default class PrintList extends PureComponent{
         return(
             <div>
                 <ul>
-                    <li>
-                        <div>
-                            <div>username</div>
-                        </div>
-                    </li>
-                </ul>
-                <ul>
                     {
                         this.props.user.map(e=>(
                             <li key={e.username}>
                                 <div>{e.username}</div>
+                                <div>{e.email}</div>
                             </li>
                         ))
                     }

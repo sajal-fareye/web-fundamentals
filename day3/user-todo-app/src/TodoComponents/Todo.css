@@ -1,0 +1,30 @@
+.todoCard{
+    
+    align-items: center;
+    justify-content: center;
+    max-height: 480px;
+    min-width: 100px;
+    background-color: white;
+    margin: 15px;
+    padding: 5px;
+    z-index: 1;
+}
+
+.todoCardDescription{
+    align-items: flex-end;
+}
+
+
+.todoCardUpdate{
+    margin: 10px;
+    height: 30px;
+    width: 70px;
+    background-color: #f0c14b;
+}
+
+.todoCardDelete{
+    margin: 10px;
+    height: 30px;
+    width: 70px;
+    background-color: #a63a3a79;
+}

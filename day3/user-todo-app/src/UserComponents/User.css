@@ -1,0 +1,46 @@
+.userContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.user{
+    justify-content: center;
+    width: 60%;
+    background-color: white;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid lightgray;
+    height: fit-content;
+    align-items: center;
+}
+
+.userName{
+    display: flex;
+    flex-direction: row;
+}
+
+.userName>p{
+    margin: 5px;
+}
+
+.userButton{
+    display: flex;
+}
+
+.userCardUpdate{
+    margin: 10px;
+    height: 30px;
+    width: 70px;
+    background-color: #f0c14b;
+}
+
+.userCardDelete{
+    margin: 10px;
+    height: 30px;
+    width: 70px;
+    background-color: #a63a3a79;
+}

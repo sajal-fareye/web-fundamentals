@@ -6,7 +6,7 @@ function Alltodos() {
 
 
     const getAllTodosFromServer=()=>{
-        axios.get('http://localhost:8082/todos')
+        axios.get('/todos')
         .then((response)=>{
             setTodos(response.data);
         },(error)=>{

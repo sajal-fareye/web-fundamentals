@@ -11,11 +11,13 @@ function AddTodo() {
     }
 
     const [todo,setTodo] = useState({});
+    
 
     function postDatatoServer(data){
-        axios.post('http://localhost:8082/todos',data)
+        axios.post('/todos',data)
         .then((response)=>{
             console.log(response);
+            setTodo({});
         },(error)=>{
             console.log(error);
         })
@@ -26,16 +28,16 @@ function AddTodo() {
             <div className='todoAdd'>
                 <form onSubmit={handleForm}>
 
-                    <h5>Todo Id</h5>
-                    <input type="text" onChange={(e)=>{setTodo({...todo,todoid:e.target.value})}}/>
+                    {/* <h5>Todo Id</h5>
+                    <input type="text" onChange={(e)=>{setTodo({...todo,todoid:e.target.value})}} value={todo.todoid}/> */}
 
-                    <h5> Todo Title </h5>
-                    <input type="text" onChange={(e)=>{setTodo({...todo,title:e.target.value})}} value={todo.title}/>
+                    <h5 className='todoHeading'> Todo Title </h5>
+                    <input className='todoInput' type="text" onChange={(e)=>{setTodo({...todo,title:e.target.value})}} value={todo.title}/>
 
-                    <h5> Description</h5>
-                    <input type="textarea" onChange={(e)=>{setTodo({...todo,body:e.target.value})}} value={todo.value}/>
+                    <h5 className='todoHeading'> Description</h5>
+                    <input className='todoInput' type="textarea" onChange={(e)=>{setTodo({...todo,body:e.target.value})}} value={todo.value}/>
 
-                    <button type='submit' className='todoAdd_Button'>Add</button>
+                    <button type='submit reset' className='todoAdd_Button'>Add</button>
                 </form>
             </div>
         </div>

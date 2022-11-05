@@ -15,6 +15,10 @@ function Header() {
       <Link to="/user">
         <h2 className='header__textLogo'>User</h2>
       </Link>
+
+      <Link to="/login">
+        <h2 className='header__textLogo'>Login</h2>
+      </Link>
     </nav>
   )
 }

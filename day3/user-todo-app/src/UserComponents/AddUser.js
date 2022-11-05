@@ -13,7 +13,7 @@ function AddUser() {
     const [user,setUser] = useState({});
 
     function postDatatoServer(data){
-        axios.post('http://localhost:8082/users',data)
+        axios.post('/users',data)
         .then((response)=>{
             console.log(response);
         },(error)=>{
@@ -35,7 +35,10 @@ function AddUser() {
                     <h5> email</h5>
                     <input type="text" onChange={(e)=>{setUser({...user,email:e.target.value})}} value={user.email}/>
 
-                    <button type='submit' className='userAdd_Button'>Add</button>
+                    <h5> Password</h5>
+                    <input type="text" onChange={(e)=>{setUser({...user,password:e.target.value})}} value={user.password}/>
+
+                    <button type='submit reset' className='userAdd_Button'>Add</button>
                 </form>
             </div>
         </div>

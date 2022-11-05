@@ -9,7 +9,13 @@ function TodoHeader() {
         <h2 className='header__textLogo'>Home</h2>
       </Link>
 
-      <h2 className='header__textLogo'>Todo</h2>
+      <Link to="/user">
+        <h2 className='header__textLogo'>User</h2>
+      </Link>
+
+      {/* <h2 className='header__textLogo'>Todo</h2> */}
+
+      
 
       <div className='header__nav'>
 

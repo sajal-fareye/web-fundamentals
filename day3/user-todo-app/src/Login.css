@@ -7,7 +7,7 @@
     
 }
 
-.todoAdd{
+.userAdd{
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -17,21 +17,21 @@
     height: fit-content;
 }
 
-.todoInput{
+.userAdd>form>h5{
     margin-bottom: 5px;
     font-size: 15px;
     font-weight: 400;
 
 }
 
-.todoHeading{
+.userAdd>form>input{
     height: 30px;
     margin-bottom: 10px;
     background-color: white;
     width: 98%;
 }
 
-.todoAdd_Button{
+.userAdd_Button{
     background-color: #f0c14b;
     border-radius: 2px;
     width: 100%;

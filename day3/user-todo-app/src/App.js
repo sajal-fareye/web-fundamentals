@@ -1,65 +1,45 @@
 
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import TodoHeader from './TodoComponents/TodoHeader';
 import Header from './Header';
 import Alltodos from './TodoComponents/Alltodos';
 import AddTodo from './TodoComponents/AddTodo';
-import UpdateTodo from './TodoComponents/UpdateTodo'
 import UserHeader from './UserComponents/UserHeader';
 import Allusers from './UserComponents/Allusers';
 import AddUser from './UserComponents/AddUser';
-import UpdateUser from './UserComponents/UpdateUser'
+import Login from './Login';
 
 function App() {
   return (
     <Router>
 
       <div className='App'>
-        <Switch>
+        <Routes>
 
-          <Route path="/todo/add">
-            <TodoHeader />
-            <AddTodo />
-          </Route>
+          <Route path="/todo/add" element={<div><TodoHeader/> <AddTodo/></div>}/>
 
-          <Route path="/todo">
-            <TodoHeader />
-            <Alltodos />
-          </Route>
+          <Route path="/todo"element={<div><TodoHeader/> <Alltodos/></div>}/>
+           
 
-          <Route path="/updateTodo/:id">
-            <TodoHeader/>
-            <UpdateTodo/>
-          </Route>
+          {/* <Route path="/updateTodo/:id" element={<div><TodoHeader/> <UpdateTodo/></div>}/> */}
 
 
+          <Route path="/user/add" element={<div><UserHeader/> <AddUser/></div>}/>
 
-          <Route path="/user/add">
-            <UserHeader />
-            <AddUser />
-          </Route>
+          <Route path="/user" element={<div><UserHeader/> <Allusers/></div>}/>
 
-          <Route path="/user">
-            <UserHeader />
-            <Allusers />
-          </Route>
+          {/* <Route path="/updateUser/:id" element={<div><UserHeader/> <UpdateUser/></div>}/> */}
 
-          <Route path="/updateUser/:id">
-            <UserHeader/>
-            <UpdateUser/>
-          </Route>
+
+          <Route path="/login" element={<div><Header/><Login/></div>}/>
 
 
 
 
+          <Route path="/" element={<div><Header/><h1>This is Home Page</h1></div>}/>
 
-          <Route path="/">
-            <Header />
-            <h1>This is Home Page</h1>
-          </Route>
-
-        </Switch>
+        </Routes>
       </div>
 
     </Router>

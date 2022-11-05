@@ -6,10 +6,12 @@ function Allusers() {
 
 
     const getAllUsersFromServer=()=>{
-        axios.get('http://localhost:8082/users')
+        axios.get('/users')
         .then((response)=>{
             setUsers(response.data);
+            console.log(response)
         },(error)=>{
+            console.log(error);
             console.log(error);
         });
     };
